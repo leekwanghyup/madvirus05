@@ -11,6 +11,14 @@
 </head>
 <body>
 Hello<br>
-<a href="${contextPath}/register/step1">회원가입</a>
+<a href="${contextPath}/register/step1">회원가입</a><br>
+<a href="${contextPath}/member_temp/edit">회원전용페이지</a>
+<c:if test="${empty authInfo}">
+	<a href="${contextPath}/login">로그인</a><br>
+</c:if>
+<c:if test="${not empty authInfo}">
+	<a href="${contextPath}/logout">로그아웃</a><br>
+</c:if>
+
 </body>
 </html>
