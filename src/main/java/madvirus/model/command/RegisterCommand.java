@@ -29,4 +29,7 @@ public class RegisterCommand {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public boolean isPasswordEqualToConfirmPassword() {
+		return password.equals(confirmPassword);
+	}
 }
